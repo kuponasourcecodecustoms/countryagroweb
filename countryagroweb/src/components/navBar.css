@@ -1,0 +1,9 @@
+.navBarComponent{
+    padding:18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navBarComponent > a{
+    /* padding: 0 8px; */
+}

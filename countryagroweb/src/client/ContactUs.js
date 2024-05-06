@@ -1,10 +1,11 @@
 import React from 'react';
-import { Header } from '../components/header';
+import { NavBar } from '../components/navBar';
 
 export const ContactUs = () => {
     return (
       <div>
-        <Header/>
+        <NavBar/>
+        <h2>Contact Details</h2>
       </div>
     );
   }

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Header } from '../components/header';
+import { NavBar } from '../components/navBar';
 
 export const Location = () => {
     return (
       <div>
-        <Header/>
+        <NavBar/>
       </div>
     );
   }
