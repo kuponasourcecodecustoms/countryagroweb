@@ -5,6 +5,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import React from 'react';
 import { LandingPage } from './client/landingPage';
 import { ContactUs } from './client/ContactUs';
 import { AboutUs } from './client/aboutUs';
