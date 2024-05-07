@@ -30,6 +30,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Check contents of working directory
+        run: |
+          ls 
+
       - name: Install ESLint
         run: |
           npm install eslint@8.10.0
@@ -37,9 +41,7 @@ jobs:
           
 
       - name: Run ESLint
-        run: 
-          cd countryagroweb
-          ls
+        run:
           npx eslint .
           --config .eslintrc.json
           --ext .js,.jsx,.ts,.tsx
