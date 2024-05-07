@@ -30,10 +30,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Check out client folder
-        run: |
-          cd countryagroweb && ls
-
       - name: Install ESLint
         run: |
           npm install eslint@8.10.0
@@ -42,8 +38,8 @@ jobs:
 
       - name: Run ESLint
         run:
-          ls & npx eslint .
-          --config .eslintrc.json
+          npx eslint .
+          --config countryagroweb/.eslintrc.json
           --ext .js,.jsx,.ts,.tsx
           --format @microsoft/eslint-formatter-sarif
           --output-file eslint-results.sarif
