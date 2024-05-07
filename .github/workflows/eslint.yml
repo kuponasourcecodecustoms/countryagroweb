@@ -30,9 +30,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Check contents of working directory
+      - name: Check out client folder
         run: |
-          ls 
+          cd countryagroweb && ls
 
       - name: Install ESLint
         run: |
