@@ -32,7 +32,7 @@ jobs:
 
       - name: Check out client folder
         run: |
-          cd countryagroweb && ls
+          cd countryagroweb/src && ls
 
       - name: Install ESLint
         run: |
