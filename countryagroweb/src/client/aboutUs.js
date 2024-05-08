@@ -41,9 +41,11 @@ export const AboutUs = () => {
     return (
       <div className='aboutUs'>
         <NavBar/>
-        <CompanyBackground/>
-        <CompanyStructure/>
-        <CorporateOverview/>
+        <div className='mainContent'>
+          <CompanyBackground/>
+          <CompanyStructure/>
+          <CorporateOverview/>
+        </div>
       </div>
     );
   }

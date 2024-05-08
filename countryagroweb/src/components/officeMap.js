@@ -11,19 +11,19 @@ export const OfficeMap = () => {
           lat: -17.816638,
           lng: 31.056858
         },
-        zoom: 12
+        zoom: 13
       };
     return (
         //Important! Always set the container height explicitly
-        <div style={{ height: '50vh', width: '50%' }}>
+        <div style={{ height: '80vh', width: '80%' }}>
           <GoogleMapReact
             bootstrapURLKeys={{ key: "" }}
             defaultCenter={defaultProps.center}
             defaultZoom={defaultProps.zoom}
           >
             <AnyReactComponent
-              lat={-17.816638}
-              lng={31.056858}
+              lat={-17.8361629}
+              lng={31.1040652}
               text="My Marker"
             />
           </GoogleMapReact>

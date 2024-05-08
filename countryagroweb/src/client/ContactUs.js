@@ -15,18 +15,20 @@ export const ContactUs = () => {
     return (
       <div>
         <NavBar/>
+        <div className='mainContent'>
         <h2>Contact Details</h2>
-        <div className='contacts'>
-        {
-          contacts.map((contact) => (
-          <ContactCard 
-            key={contact?.id}
-            name={contact?.name} 
-            emailAddress={contact?.emailAddress} 
-            role={contact?.role} 
-            contactNumber={contact?.contactNumber}
-          />))
-        }
+          <div className='contacts'>
+          {
+            contacts.map((contact) => (
+            <ContactCard 
+              key={contact?.id}
+              name={contact?.name} 
+              emailAddress={contact?.emailAddress} 
+              role={contact?.role} 
+              contactNumber={contact?.contactNumber}
+            />))
+          }
+          </div>
         </div>
       </div>
     )

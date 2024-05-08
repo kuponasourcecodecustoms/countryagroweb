@@ -6,8 +6,14 @@ export const Location = () => {
     return (
       <div>
         <NavBar/>
-        <div>
+        <div className='mainContent'>
           <p>We can be found at:</p>
+          <div>
+            <p>70 Mutare Road</p>
+            <p>Msasa</p>
+            <p> Harare</p>
+            <p> Zimbabwe</p>
+          </div>
           <OfficeMap/>
         </div>
       </div>
