@@ -8,7 +8,7 @@ export const Location = () => {
         <NavBar/>
         <div className='mainContent'>
           <p>We can be found at:</p>
-          <div>
+          <div className='locationCard'>
             <p>70 Mutare Road</p>
             <p>Msasa</p>
             <p> Harare</p>

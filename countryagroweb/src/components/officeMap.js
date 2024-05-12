@@ -15,8 +15,8 @@ export const OfficeMap = () => {
       };
     return (
         //Important! Always set the container height explicitly
-        <div style={{ height: '80vh', width: '80%' }}>
-          <GoogleMapReact
+        <div className="locationMap" style={{ height: '80vh', width: '100%', borderRadius: '8px'}}>
+          <GoogleMapReact 
             bootstrapURLKeys={{ key: "" }}
             defaultCenter={defaultProps.center}
             defaultZoom={defaultProps.zoom}

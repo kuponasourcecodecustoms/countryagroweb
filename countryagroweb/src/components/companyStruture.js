@@ -1,38 +1,31 @@
 import React from 'react';
-import { AnimatedTree } from 'react-tree-graph';
+import { Tree, TreeNode } from 'react-organizational-chart';
 import './companyStructure.css';
 
-const data = {
-	name: 'Managing Director',
-	children: [ {
-		name: 'Administration'
-	},{
-		name: 'Operations',
-        children: [{
-            name: 'Drivers'
-        },{
-            name: 'Assistant Drivers'
-        }]
-	},{
-        name: 'Accountant'
-    }]
-};
+
+const OrganisationStructure = () => (
+  <Tree  
+    lineWidth={'2px'}
+    lineColor={'#fc9c05'}
+    lineBorderRadius={'8px'}
+    lineHeight={'24px'}
+  label={<div className='treeNode'>Managing Director</div>}>
+    <TreeNode label={<div className='treeNode'>Administration</div>}/>
+    <TreeNode label={<div className='treeNode'>Operations</div>}>
+    <TreeNode label={<div className='treeNode'>Drivers</div>}/>
+    <TreeNode label={<div className='treeNode'>Assistant Drivers</div>}/>
+    </TreeNode>
+      <TreeNode label={<div className='treeNode'>Operations</div>} />
+  </Tree>)
+
 
 export const CompanyStructure = () => {
     return (
       <div className='companyStructureComponent'>
       <h2>Company Structure</h2>
         <div className='companyStructureTree'>
-        <AnimatedTree
-        data={data}
-        height={400}
-        width={500}
-        nodeShape={'rect'}
-        svgProps={{
-            transform: 'rotate(90)'
-        }}
-        />
-        </div>
+        <OrganisationStructure/>
+      </div>
       </div>
     );
   }
