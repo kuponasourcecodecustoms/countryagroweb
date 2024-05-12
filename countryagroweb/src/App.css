@@ -7,3 +7,42 @@
         margin: 0;
     }
 }
+
+.imageGallery {
+    display: inline-flex;
+    width: 100%;
+    border-bottom: solid 2px #fc9c05;
+    height: 356px;
+    .leftImage > img{
+        width: 156px;
+        height: 156px;
+    }
+    .leftImage {
+        padding: 28px 24px;
+        text-align: center;
+        height: 256px;
+    }
+    .rightImage {
+        display: inline-flex;
+        height: 292px;
+        width: 100%;
+        border-radius: 8px;
+        .leftButton,.rightButton {
+            width: 48px;
+            height: 48px;
+            position:relative;
+            background: transparent;
+        }
+        .leftButton{
+            margin-right: -128px;
+        }
+        .rightButton{
+            margin-left: -128px;
+        }
+    }
+    .rightImage > img{
+        padding: 0 72px;
+        width: 100%;
+        height: 356px;
+    }
+}
