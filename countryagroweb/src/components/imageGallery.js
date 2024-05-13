@@ -1,4 +1,6 @@
 import React from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft, faArrowRight} from '@fortawesome/free-solid-svg-icons'
 
 // eslint-disable-next-line react/prop-types
 export const ImageGallery = ({mainLogo,images,currentImage,moveLeft,moveRight}) =>(
@@ -9,9 +11,9 @@ export const ImageGallery = ({mainLogo,images,currentImage,moveLeft,moveRight}) 
       <h3>Exceptional Transport Services</h3>
       </div>
       <div className='rightImage'>
-      <button className='leftButton' onClick={() =>moveLeft()}>LEFT</button>
+      <button className='leftButton' onClick={() =>moveLeft()}><FontAwesomeIcon icon={faArrowLeft} /></button>
       <img  src={images[currentImage]} alt="Truck Image"/>
-      <button className='rightButton' onClick={() =>moveRight()}>RIGHT</button>
+      <button className='rightButton' onClick={() =>moveRight()}><FontAwesomeIcon icon={faArrowRight} /></button>
       </div>
     </div>
   )

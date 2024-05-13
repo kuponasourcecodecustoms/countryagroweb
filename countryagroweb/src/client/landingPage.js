@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React,{ useState} from 'react';
 import { NavBar } from '../components/navBar';
 import { ImageGallery } from '../components/imageGallery';
 import mainLogo from '../images/logo.png';
@@ -14,8 +14,14 @@ import truck5 from '../images/truckImages/truck4.jpg';
 
 export const LandingPage = () => {
   const [currentImage,setImage] = useState(0)
+  
   const galleryLeft = () => currentImage > 0 ? setImage(currentImage -1) : setImage(images.length -1)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const galleryRight = () => currentImage < images.length -1 ? setImage(currentImage + 1) : setImage(0)
+  // useEffect(() => {
+  //   setInterval(galleryRight,3000)
+  // }, [galleryRight]);
+  
 
     return (
       <div className='landingPage'>
