@@ -8,15 +8,33 @@ import truck2 from '../images/truckImages/truck2.jpg';
 import truck3 from '../images/truckImages/truck3.jpg';
 import truck4 from '../images/truckImages/truck4.jpg';
 import truck5 from '../images/truckImages/truck4.jpg';
+import { array, object, func} from 'prop-types';
 
  const images = [truck,truck1,truck2,truck3,truck4,truck5]
 
+const LandingPageBanner = ({images,currentImage,moveLeft,moveRight}) => (  <div className='imageGallery'>
+<div className="leftImage">
+<img  src={mainLogo} alt="Country Agro Logistics (Pvt) Ltd"/>
+<h2>Country Agro Logistics (Pvt) Ltd</h2>
+<h3>Exceptional Transport Services</h3>
+</div>
+<div className='rightImage'>
+<ImageGallery mainLogo={mainLogo} images ={images} currentImage={currentImage} moveLeft={moveLeft} moveRight={moveRight}/>
+</div>
+</div>
+)
+
+LandingPageBanner.propTypes = {
+  images: array.isRequired,
+  currentImage: object.isRequired,
+  moveLeft: func.isRequired,
+  moveRight: func.isRequired
+}
 
 export const LandingPage = () => {
   const [currentImage,setImage] = useState(0)
   
   const galleryLeft = () => currentImage > 0 ? setImage(currentImage -1) : setImage(images.length -1)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const galleryRight = () => currentImage < images.length -1 ? setImage(currentImage + 1) : setImage(0)
   // useEffect(() => {
   //   setInterval(galleryRight,3000)
@@ -26,7 +44,8 @@ export const LandingPage = () => {
     return (
       <div className='landingPage'>
         <NavBar/>
-        <ImageGallery mainLogo={mainLogo} images ={images} currentImage={currentImage} moveLeft={galleryLeft} moveRight={galleryRight}/>
+        <LandingPageBanner mainLogo ={mainLogo} images={images} currentImage={currentImage} moveLeft={galleryLeft} moveRight={galleryRight}/>
       </div>
+   
     )
   }

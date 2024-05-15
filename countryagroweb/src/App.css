@@ -8,6 +8,10 @@
     }
 }
 
+h2,h3,h4 {
+    text-align: center;
+}
+
 .imageGallery {
     display: inline-flex;
     width: 100%;
@@ -73,5 +77,27 @@
         @media only screen and (max-width: 479px){
             height: auto;
         }
+    }
+    &.companyBackground{
+        border: none;
+        column-gap: 20px;
+        justify-content: space-between;
+        .rightImage.companyBackground > img {
+            border-radius: 18px;
+        }
+    }
+}
+
+.companyStructure.corporateOverview {
+    width: 100%;
+    margin-top: 32px;
+    display: inline-flex;
+    column-gap: 20px;
+    justify-content: space-between;
+    div.companyStructureComponent,div.corporateOverview {
+        width:100%;
+        border: solid 2px #fc9c05;
+        border-radius: 18px;
+        padding: 18px;
     }
 }

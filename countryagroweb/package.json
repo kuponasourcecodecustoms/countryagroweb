@@ -28,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint . --config .eslintrc.json"
+    "lint": "eslint ."
   },
   "browserslist": {
     "production": [
@@ -43,9 +43,10 @@
     ]
   },
   "devDependencies": {
+    "@eslint/js": "^9.2.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "globals": "^15.1.0"
+    "globals": "^15.2.0"
   }
 }

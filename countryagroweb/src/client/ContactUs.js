@@ -10,7 +10,21 @@ export const ContactUs = () => {
       role: "Administrator",
       emailAddress: "admin@moneymaker.co.zw",
       contactNumber: "+263 775 880 756"
+    },{
+      id: "1",
+      name: "Tatenda Sayi",
+      role: "Administrator",
+      emailAddress: "admin@moneymaker.co.zw",
+      contactNumber: "+263 775 880 756"
+    }
+    ,{
+      id: "1",
+      name: "Tatenda Sayi",
+      role: "Administrator",
+      emailAddress: "admin@moneymaker.co.zw",
+      contactNumber: "+263 775 880 756"
     })
+    
 
     return (
       <div>
@@ -26,7 +40,8 @@ export const ContactUs = () => {
               emailAddress={contact?.emailAddress} 
               role={contact?.role} 
               contactNumber={contact?.contactNumber}
-            />))
+            />
+            ))
           }
           </div>
         </div>
