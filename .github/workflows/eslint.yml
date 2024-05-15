@@ -33,7 +33,6 @@ jobs:
       - name: Install ESLint
         run: |
           npm install eslint@8.57.0
-          npm install eslint/js -D
           npm install eslint-plugin-react@7.34.1
           npm install eslint-plugin-react-hooks@4.6.2
           
