@@ -1,6 +1,7 @@
 import React from 'react';
-import { NavBar } from '../components/navBar';
 import { ContactCard } from '../components/contactCard';
+import { Footer } from '../components/footer';
+import { NavBar } from '../components/navBar';
 
 export const ContactUs = () => {
     const contacts = []
@@ -45,6 +46,7 @@ export const ContactUs = () => {
           }
           </div>
         </div>
+        <Footer/>
       </div>
     )
   }

@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
-import { NavBar } from '../components/navBar';
 import { CompanyStructure } from '../components/companyStruture';
+import { Footer } from '../components/footer';
 import { ImageGallery } from '../components/imageGallery';
+import { NavBar } from '../components/navBar';
+
 import truck from '../images/truckImages/truck.jpg';
 import truck1 from '../images/truckImages/truck1.jpg';
 import truck2 from '../images/truckImages/truck2.jpg';
@@ -67,6 +69,7 @@ export const AboutUs = () => {
           <CorporateOverview/>
           </div>
         </div>
+        <Footer/>
       </div>
     );
   }

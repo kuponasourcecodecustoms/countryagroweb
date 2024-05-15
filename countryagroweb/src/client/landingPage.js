@@ -1,14 +1,17 @@
 import React,{ useState} from 'react';
-import { NavBar } from '../components/navBar';
+import { array, object, func} from 'prop-types';
+import { Footer } from '../components/footer';
 import { ImageGallery } from '../components/imageGallery';
 import mainLogo from '../images/logo.png';
+import { NavBar } from '../components/navBar';
+
 import truck from '../images/truckImages/truck.jpg';
 import truck1 from '../images/truckImages/truck1.jpg';
 import truck2 from '../images/truckImages/truck2.jpg';
 import truck3 from '../images/truckImages/truck3.jpg';
 import truck4 from '../images/truckImages/truck4.jpg';
 import truck5 from '../images/truckImages/truck4.jpg';
-import { array, object, func} from 'prop-types';
+
 
  const images = [truck,truck1,truck2,truck3,truck4,truck5]
 
@@ -45,6 +48,7 @@ export const LandingPage = () => {
       <div className='landingPage'>
         <NavBar/>
         <LandingPageBanner mainLogo ={mainLogo} images={images} currentImage={currentImage} moveLeft={galleryLeft} moveRight={galleryRight}/>
+      <Footer/>
       </div>
    
     )

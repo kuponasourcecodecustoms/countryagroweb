@@ -1,6 +1,9 @@
 import React from 'react';
+import { Footer } from '../components/footer';
 import { NavBar } from '../components/navBar';
 import { OfficeMap } from '../components/officeMap';
+
+
 
 export const Location = () => {
     return (
@@ -16,6 +19,7 @@ export const Location = () => {
           </div>
           <OfficeMap/>
         </div>
+        <Footer/>
       </div>
     );
   }
