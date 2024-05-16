@@ -1,0 +1,10 @@
+.locationMap {
+    margin-top: 18px;
+    box-shadow: 0px 0px 8px  #61cefc;
+    height: '80vh';
+    width: '80%';
+    div{
+        border-radius: 8px;
+    }
+
+}

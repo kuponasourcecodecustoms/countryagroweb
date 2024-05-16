@@ -1,0 +1,13 @@
+.contactCard {
+    display: grid;
+    border: solid 2px #fc9c05;
+    box-shadow: 0px 0px 8px  #61cefc;
+    border-radius: 8px;
+    padding: 8px;
+    span {
+        font-size: 18px;
+    }
+    path {
+        fill:  #04ccfc;
+    }
+}

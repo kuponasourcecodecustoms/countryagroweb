@@ -18,3 +18,15 @@
 * Initial design is for a browser friendly website
 * Mobile view will be added incrementally as a second phase
 * Designs to be made using Figma
+
+## Colour Palette
+
+* As extracted from the Logo for the website:
+    * #17b14c
+    * #fc9c05
+    * #04ccfc
+    * #dcecc9 
+    * #61cefc
+    * #7cfc7c 
+    * #2cd4fc 
+    * #20d0dc 
