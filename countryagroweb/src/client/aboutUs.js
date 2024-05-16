@@ -55,6 +55,7 @@ export const AboutUs = () => {
     return (
       <div className='aboutUs'>
         <NavBar/>
+        <div className='mainBody'>
         <div className='mainContent'>
         <div className='imageGallery companyBackground'>
         <div className='leftImage companyBackground'>
@@ -68,6 +69,7 @@ export const AboutUs = () => {
             <CompanyStructure/>
           <CorporateOverview/>
           </div>
+        </div>
         </div>
         <Footer/>
       </div>

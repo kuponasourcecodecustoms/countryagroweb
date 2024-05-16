@@ -30,7 +30,7 @@ export const ContactUs = () => {
     return (
       <div>
         <NavBar/>
-        <div className='mainContent'>
+        <div className='mainBody'>
         <h2>Contact Details</h2>
           <div className='contacts'>
           {

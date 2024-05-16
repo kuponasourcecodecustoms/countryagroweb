@@ -13,7 +13,7 @@ import truck4 from '../images/truckImages/truck4.jpg';
 import truck5 from '../images/truckImages/truck4.jpg';
 
 
- const images = [truck,truck1,truck2,truck3,truck4,truck5]
+const images = [truck,truck1,truck2,truck3,truck4,truck5]
 
 const LandingPageBanner = ({images,currentImage,moveLeft,moveRight}) => (  <div className='imageGallery'>
 <div className="leftImage">
@@ -47,7 +47,9 @@ export const LandingPage = () => {
     return (
       <div className='landingPage'>
         <NavBar/>
+        <div className='mainBody'>
         <LandingPageBanner mainLogo ={mainLogo} images={images} currentImage={currentImage} moveLeft={galleryLeft} moveRight={galleryRight}/>
+        </div>
       <Footer/>
       </div>
    

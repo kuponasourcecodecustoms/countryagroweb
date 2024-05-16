@@ -12,6 +12,10 @@ h2,h3,h4 {
     text-align: center;
 }
 
+.mainBody{
+    min-height: 700px;
+    margin: auto 24px;
+}
 .imageGallery {
     display: inline-flex;
     width: 100%;
@@ -82,6 +86,7 @@ h2,h3,h4 {
         border: none;
         column-gap: 20px;
         justify-content: space-between;
+        padding-bottom: 128px;
         .rightImage.companyBackground > img {
             border-radius: 18px;
         }
