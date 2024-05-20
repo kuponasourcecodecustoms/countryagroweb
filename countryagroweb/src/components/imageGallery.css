@@ -1,0 +1,85 @@
+.imageGallery {
+    display: inline-flex;
+    width: 100%;
+    border-bottom: solid 2px #fc9c05;
+    height: 375px;
+
+    .leftImage {
+        display: grid;
+        text-align: center;
+        height: 256px;
+        padding: 24px 0 0 24px;
+
+        img {
+            width: 156px;
+            height: 156px;
+            margin: 0 auto !important;
+        }
+    }
+
+    .rightImage {
+        display: inline-flex;
+        height: 292px;
+        width: 100%;
+        border-radius: 8px;
+
+        img {
+            width: 667px;
+            height: 375px;
+        }
+       
+        .leftButton,.rightButton {
+            width: 48px;
+            height: 48px;
+            position:relative;
+            background: #04ccfc;
+            border: solid 2px #fc9c05;
+            border-radius: 48px;
+            svg {
+                transform: scale(2);
+            }
+        }
+
+        .leftButton {
+            margin: auto -32px auto auto ;
+        }
+
+        .rightButton {
+            margin: auto auto auto -32px;
+        }
+    }
+
+    @media only screen and (max-width: 479px){
+        height: unset;
+
+        .leftImage {
+            height: auto;
+            padding: 8px 2px;
+            img {
+                height: 48px;
+                width: 48px;
+            }
+        }
+
+        .rightImage > img {
+            height: auto;
+        }
+
+        .leftButton,.rightButton {
+            height: 32px;
+            width: 32px;
+        }
+    }
+
+
+    &.companyBackground {
+        border: none;
+        column-gap: 20px;
+        justify-content: space-between;
+        padding-bottom: 128px;
+
+        .rightImage.companyBackground > img {
+            border-radius: 18px;
+        }
+    }
+}

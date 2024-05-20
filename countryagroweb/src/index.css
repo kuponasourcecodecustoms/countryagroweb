@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
-.mainContent {
-  padding: 18px;
+.mainBody{
+  min-height: 700px;
+  margin: 24px;
+}
+
+h2,h3,h4 {
+  text-align: center;
 }

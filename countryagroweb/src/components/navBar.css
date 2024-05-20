@@ -1,19 +1,17 @@
-.navBarComponent{
+.navBarComponent {
     padding: 8px 24px;
     display: flex;
     justify-content: space-between;
     background-color:  #61cefc ;
     vertical-align: middle;
-}
-
-.navBarComponent > a {
-    /* padding: 0 8px; */
-    font-size: 18px;
-    text-decoration: none;
-    margin: auto;
-    &:hover{
-        text-decoration: underline;
-        text-shadow: 0 0 0.01px black;
+    a {
+        font-size: 18px;
+        text-decoration: none;
+        margin: auto;
+        &:hover {
+            text-decoration: underline;
+            text-shadow: 0 0 0.01px black;
+        }
     }
 }
 
