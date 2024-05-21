@@ -10,7 +10,7 @@ export const ContactCard = ({name,emailAddress,contactNumber,role}) => (
   <div className='contactCard'>
     <span><FontAwesomeIcon icon={faUser}/>  Name: {name}</span>
     <span><FontAwesomeIcon icon={faBriefcase}/>  Role: {role}</span>
-    <span><FontAwesomeIcon icon={faEnvelope}/>  Email Address:&nbsp
+    <span><FontAwesomeIcon icon={faEnvelope}/>  Email Address:&nbsp;
       <Link to='javascript:void(0)'
         onClick={() => window.location = `mailto:${emailAddress}`}>
           {emailAddress}

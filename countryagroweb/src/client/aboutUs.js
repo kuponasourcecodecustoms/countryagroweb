@@ -10,38 +10,39 @@ const aboutUsImages = images.keys().map(image => images(image));
 const CompanyBackground = () => ( 
   <div className='companyBackgground'>
     <h2>Company Background</h2>
-    <p>Country Agro International (Pvt) Ltd is a privately owned Zimbabwean company which is now spreading its portfolio to the transport sector.<br/>
-      We aim to become a preferred partner in local conveyance of goods to and from any destination in Zimbabwe.<br/>
-      We strive to build relationships with our clients, persistently achieving an understanding of their current, as well as future requirements.
+    <p>Country Agro Logistics (Pvt) Ltd is a privately owned Zimbabwean logistics company.</p>
+    <p>
+    We aim to become a preferred partner in local conveyance of goods to and from any destination in Zimbabwe.<br/>
+    Country Agro Logistics has assembled a logistic Team, (operations, drivers, assistant drivers accountant),
+    and complimentary administration team, with vast experience, most having worked for the major multinational companies.
     </p>
-    <p>Country Agro International has modern, well maintained, trucks and trailers arriving on time to pick up or deliver the cargo.<br/>
-      The vehicles have Insurance cover and are fitted with satellite tracking system, monitored in-house as well as 24-hour cellphone contact.<br/>
-      Our drivers, holders of Defensive Driving Certificates, are all well trained in transporting food commodities and are fully aware, and sensitized, of the service standards required to satisfy our customers.
+    <p>We strive to build relationships with our clients, persistently achieving an understanding of their current, as well as future requirements.<br/>
+    Country Agro International has modern, well maintained, trucks and trailers arriving on time to pick up or deliver the cargo
     </p>
   </div>
 )
 
-const CorporateOverview = () => ( 
-  <div className='corporateOverview'>
-    <h2>Corporate Overview</h2>
-    <span>
-      <h3>Vision</h3>
-      <p>To be the preferred and repeatedly chosen company in the provision of transport services to the manufacturing sector.</p>
-    </span>
-    <span>
-      <h3>Mission</h3>
-      <p>To provide total transport solutions centered on upholding a reputation of reliable, safe, timeous and cost effective delivery of cargo for our clients.</p>
-    </span>
-    <span>
-      <h3>Values</h3>
-      <ul>
-        <li>Customer satisfaction</li>
-        <li>Safety for cargo at all costs</li>
-        <li>Integrity and self-improvement</li>
-      </ul>
-    </span>
+const CompanyProfile = () =>  (
+  <div className='companyProfile'>
+    <h2>Company Profile</h2>
+    <p>We have 13 employees altogether including the drivers, assistant drivers, operations and administration..</p>
+    <p>For customers’ peace of mind, the vehicles:
+    <ul>
+      <li>Have Full Comprehensive Insurance cover</li>
+      <li>Have adequate Goods in Transit insurance cover</li>
+      <li>Are fitted with satellite tracking system, monitored in-house as well as 24-hour cell phone contact when on the road</li>
+    </ul>
+    </p>
+    <p>Our drivers are:
+    <ul>
+      <li>Highly experienced holders of Defensive Driving Certificates,</li>
+      <li>All well trained in transporting different commodities including food stuffs, live poultry, specialised equipment and hazardous materials</li>
+      <li>Uphold high service standards required to satisfy our customers.</li>
+    </ul>
+    </p>
   </div>
 )
+
 
 export const AboutUs = () => {
   const [currentImage,setImage] = useState(0)
@@ -62,7 +63,7 @@ export const AboutUs = () => {
           </div>
           <div className='companyStructure corporateOverview'>
             <CompanyStructure/>
-            <CorporateOverview/>
+            <CompanyProfile/>
           </div>
         </div>
         <Footer/>

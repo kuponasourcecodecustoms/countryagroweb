@@ -1,0 +1,7 @@
+.companyOverview {
+    margin-top: 32px;
+}
+.companyOverviewBody {
+    display: inline-flex;
+    gap: 18px
+}
