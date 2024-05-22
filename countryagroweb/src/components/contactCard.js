@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBriefcase, faEnvelope, faPhone, faUser} from '@fortawesome/free-solid-svg-icons'
+import whatsappLogo from '../images/whatsapp-icon-logo.png'
 
 // eslint-disable-next-line react/prop-types
 export const ContactCard = ({name,emailAddress,contactNumber,role}) => (
@@ -16,7 +17,10 @@ export const ContactCard = ({name,emailAddress,contactNumber,role}) => (
           {emailAddress}
       </Link>
     </span>
-    <span><FontAwesomeIcon icon={faPhone}/>  Contact Number: {contactNumber}</span>
+    <span className='contactNumber'><FontAwesomeIcon icon={faPhone}/>  Contact Number: {contactNumber} <Link to='javascript:void(0)'
+        onClick={() => window.location = `https://wa.me/${contactNumber.replace(/\s/g, '')}`}>
+          <img src={whatsappLogo}/>
+      </Link></span>
   </div>
 )
 

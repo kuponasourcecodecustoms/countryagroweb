@@ -1,3 +1,9 @@
 .map-container {
-    height: 400px;
-  }
+  height: 400px;
+  border-radius: 8px;
+  border: solid 2px #fc9c05;
+  box-shadow: 0px 0px 8px  #61cefc; 
+}
+.officeMap {
+  margin-top: 18px;
+}

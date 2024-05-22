@@ -1,0 +1,8 @@
+.locationCard {
+    display: inline-flex;
+    gap: 8px;
+    p {
+        margin: 0;
+        font-size: 18px;
+    }
+}

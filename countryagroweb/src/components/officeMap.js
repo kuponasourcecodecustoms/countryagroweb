@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import mapboxgl from '!mapbox-gl'
 import './officeMap.css'
 import 'mapbox-gl/dist/mapbox-gl.css'
@@ -8,7 +8,6 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibmlnZWx2ZXJlIiwiYSI6ImNsd2h1b2p2OTBqN2wycXBmc
 export const OfficeMap = () => {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [zoom, setZoom] = useState(12);
 
   const harareCityCoords = { longitude :31.056858, latitude: -17.8361629 }
   const officeCoords = { longitude: 31.1040652, latitude: -17.8361629 }
@@ -23,12 +22,12 @@ export const OfficeMap = () => {
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/streets-v12',
       center: [harareCityCoords.longitude, harareCityCoords.latitude],
-      zoom: zoom
+      zoom: 12
     })
   })
 
   return (
-    <div>
+    <div className="officeMap">
       <div ref={mapContainer} className="map-container" />
     </div>
   );
