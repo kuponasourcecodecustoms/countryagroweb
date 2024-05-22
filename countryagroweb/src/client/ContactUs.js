@@ -33,14 +33,17 @@ export const ContactUs = () => {
           <div className='contacts'>
           {rows.map((row, index) => {
         return (<div className="row" key={index}>
-          {row.map(col => <div className="col-2"> <ContactCard 
-              key={col?.id}
-              name={col?.name} 
-              emailAddress={col?.emailAddress} 
-              role={col?.role} 
-              contactNumber={col?.contactNumber}
-            />
-            </div>)}
+          {row.map(col => 
+            <div key={index} className="col-2">
+              <ContactCard 
+                key={col?.id}
+                name={col?.name} 
+                emailAddress={col?.emailAddress} 
+                role={col?.role} 
+                contactNumber={col?.contactNumber}
+              />
+              </div>
+          )}
         </div>);
        })}
           </div>
