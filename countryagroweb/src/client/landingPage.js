@@ -22,8 +22,18 @@ const LandingPageBanner = ({images,currentImage,moveLeft,moveRight}) => (
   </div>
 )
 
+const LandingPageButtons = () => (
+  <div className='landingPageButtons'>
+    <div className='buttonRow'>
+      <button onClick={()=>  window.location.href='/contact-us'}>How to Contact Us</button>
+      <button onClick={()=>  window.location.href='/location'}>Where to Find Us</button>
+      <button onClick={()=>  window.location.href='/about-us'} >More About Us</button>
+    </div>
+  </div>
+)
+
 const CompanyOverview = () => ( 
-  <div className='companyOverview'>
+  <div className='companyOverviewContainer'>
     <h2>Company Overview</h2>
     <span>Country Agro Logistics (Pvt) Ltd is a privately owned Zimbabwean logistics company.</span>
     <span> We aim to become a preferred partner in local conveyance of goods to and from any destination in Zimbabwe.<br/>
@@ -83,6 +93,7 @@ export const LandingPage = () => {
       <div className='mainBody'>
         <LandingPageBanner mainLogo ={mainLogo} images={truckImages} currentImage={currentImage} moveLeft={galleryLeft} moveRight={galleryRight}/>
         <CompanyOverview/>
+        <LandingPageButtons/>
       </div>
       <Footer/>
     </div> 

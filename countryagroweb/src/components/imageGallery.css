@@ -1,14 +1,13 @@
 .imageGallery {
     display: inline-flex;
     width: 100%;
-    height: 375px;
-
+    padding-bottom: 24px;
+   margin: 0 auto;
     .leftImage {
         display: grid;
         text-align: center;
-        height: 256px;
-        padding: 24px 0 0 24px;
-
+        padding-top: 12px;
+        width: 50%;
         img {
             width: 156px;
             height: 156px;
@@ -18,13 +17,10 @@
 
     .rightImage {
         display: inline-flex;
-        height: 292px;
-        width: 100%;
-        border-radius: 8px;
-
+        width: 50%;
         img {
             width: 667px;
-            height: 375px;
+            height: 375px;        
         }
        
         .leftButton,.rightButton {
@@ -34,8 +30,12 @@
             background: none;
             border: none;
             border-radius: 48px;
+
             svg {
                 transform: scale(3);
+                path {
+                    fill: #fc9c05;
+                }
             }
         }
 
@@ -70,15 +70,10 @@
         }
     }
 
-
+/* 
     &.companyBackground {
         border: none;
         column-gap: 20px;
         justify-content: space-between;
-        padding-bottom: 128px;
-
-        .rightImage.companyBackground > img {
-            border-radius: 18px;
-        }
-    }
+    } */
 }

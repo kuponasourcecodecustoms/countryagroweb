@@ -24,6 +24,7 @@ export const OfficeMap = () => {
       center: [harareCityCoords.longitude, harareCityCoords.latitude],
       zoom: 12
     })
+   
   })
 
   return (
