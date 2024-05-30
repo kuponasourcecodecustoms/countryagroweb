@@ -1,32 +1,36 @@
-import React from 'react'
-import GoogleMapReact from 'google-map-react'
+import React, { useRef, useEffect } from 'react';
+import mapboxgl from '!mapbox-gl'
 import './officeMap.css'
+import 'mapbox-gl/dist/mapbox-gl.css'
 
-// eslint-disable-next-line react/prop-types
-const AnyReactComponent = ({ text }) => <h1>{text}</h1>
+mapboxgl.accessToken = 'pk.eyJ1IjoibmlnZWx2ZXJlIiwiYSI6ImNsd2h1b2p2OTBqN2wycXBmcm04NHl6N2gifQ.Sh6lEdLP_y1uOhGxTQCBXQ'
 
 export const OfficeMap = () => {
-  const defaultProps = {
-    center: {
-      lat: -17.816638,
-      lng: 31.056858
-    },
-    zoom: 13
-  }
+  const mapContainer = useRef(null);
+  const map = useRef(null);
+
+  const harareCityCoords = { longitude :31.056858, latitude: -17.8361629 }
+  const officeCoords = { longitude: 31.1040652, latitude: -17.8361629 }
+
+  useEffect(() => {
+    if (map.current) {
+      new mapboxgl.Marker().setLngLat([officeCoords.longitude,officeCoords.latitude]).addTo(map.current)
+      return
+    }
+
+    map.current = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: 'mapbox://styles/mapbox/streets-v12',
+      center: [harareCityCoords.longitude, harareCityCoords.latitude],
+      zoom: 12
+    })
+   
+  })
 
   return (
-    <div className="locationMap" style={{ height: '80vh', width: '100%', borderRadius: '8px'}}>
-      <GoogleMapReact 
-        bootstrapURLKeys={{ key: "" }}
-        defaultCenter={defaultProps.center}
-        defaultZoom={defaultProps.zoom}
-      >
-        <AnyReactComponent
-          lat={-17.8361629}
-          lng={31.1040652}
-          text="My Marker"
-        />
-      </GoogleMapReact>
+    <div className="officeMap">
+      <div ref={mapContainer} className="map-container" />
     </div>
-  )
+  );
+
 }

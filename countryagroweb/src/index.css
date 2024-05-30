@@ -14,7 +14,7 @@ code {
 
 .mainBody{
   min-height: 700px;
-  margin: 24px;
+  margin: 0 24px;
 }
 
 h2,h3,h4 {

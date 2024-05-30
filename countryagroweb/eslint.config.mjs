@@ -4,8 +4,8 @@ import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
 
 
 export default [
-  {languageOptions: { globals: globals.browser },
-  settings : { 
+  { languageOptions: { globals: { ...globals.browser, ...globals.node } },
+    settings : { 
       react: {
         version: "detect"
       }
