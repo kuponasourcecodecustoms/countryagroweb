@@ -2,6 +2,7 @@ import React from 'react';
 import { ContactCard } from '../components/contactCard'
 import { Footer } from '../components/footer'
 import { NavBar } from '../components/navBar'
+import { ContactForm } from '../components/contactForm';
 import './contactUs.css'
 
 export const ContactUs = () => {
@@ -13,7 +14,7 @@ export const ContactUs = () => {
       emailAddress: "admin@moneymaker.co.zw",
       contactNumber: "+263 775 880 756"
     },{
-      id: "1",
+      id: "2",
       name: "Brian Vere",
       role: "Managing Director",
       emailAddress: "brian@countryagrointernational.co.zw",
@@ -29,23 +30,25 @@ export const ContactUs = () => {
       <div>
         <NavBar/>
         <div className='mainBody'>
+        <ContactForm/>
         <h2>Contact Details</h2>
           <div className='contacts'>
-          {rows.map((row, index) => {
-        return (<div className="row" key={index}>
-          {row.map(col => 
-            <div key={index} className="col-2">
-              <ContactCard 
-                key={col?.id}
-                name={col?.name} 
-                emailAddress={col?.emailAddress} 
-                role={col?.role} 
-                contactNumber={col?.contactNumber}
-              />
+            {rows.map((row, index) =>  (
+              <div className="row" key={index}>
+                {row.map(col => 
+                  <div key={col?.id} className="col-2">
+                    <ContactCard 
+                      key={col?.id}
+                      name={col?.name} 
+                      emailAddress={col?.emailAddress} 
+                      role={col?.role} 
+                      contactNumber={col?.contactNumber}
+                    />
+                    </div>
+                )}
               </div>
-          )}
-        </div>);
-       })}
+              )
+            )}
           </div>
         </div>
         <Footer/>

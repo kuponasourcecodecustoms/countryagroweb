@@ -1,5 +1,5 @@
 import React,{ useState} from 'react'
-import { array, object, func} from 'prop-types'
+import { array, number, func} from 'prop-types'
 import { Footer } from '../components/footer'
 import { ImageGallery } from '../components/imageGallery'
 import mainLogo from '../images/logo.png'
@@ -77,7 +77,7 @@ const CompanyOverview = () => (
 
 LandingPageBanner.propTypes = {
   images: array.isRequired,
-  currentImage: object.isRequired,
+  currentImage: number.isRequired,
   moveLeft: func.isRequired,
   moveRight: func.isRequired
 }
