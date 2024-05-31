@@ -40,8 +40,7 @@ jobs:
 
       - name: Run ESLint
         run:
-          export ESLINT_USE_FLAT_CONFIG=true
           npx eslint .
           --config countryagroweb/eslint.config.mjs
-          --ext .js,.jsx,.ts,.tsx
+          --ext .js,.jsx,.ts,.tsx --env eslint_use_flat_config true
 
