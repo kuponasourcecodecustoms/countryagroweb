@@ -42,5 +42,5 @@ jobs:
         run:
           npx eslint .
           --config countryagroweb/eslint.config.mjs
-          --ext .js,.jsx,.ts,.tsx --env eslint_use_flat_config true
+          --ext .js,.jsx,.ts,.tsx --use-flat-config
 
