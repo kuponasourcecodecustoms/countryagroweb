@@ -1,5 +1,5 @@
 import React,{ useState} from 'react'
-import { array, object, func} from 'prop-types'
+import { array, number, func} from 'prop-types'
 import { Footer } from '../components/footer'
 import { ImageGallery } from '../components/imageGallery'
 import mainLogo from '../images/logo.png'
@@ -7,7 +7,7 @@ import { NavBar } from '../components/navBar'
 import './landingPage.css'
 
 const images = require.context('../images/truckImages', true)
-const truckImages = images.keys().map(image => images(image));
+const truckImages = images.keys().map(image => images(image))
 
 const LandingPageBanner = ({images,currentImage,moveLeft,moveRight}) => (
   <div className='imageGallery'>
@@ -74,10 +74,9 @@ const CompanyOverview = () => (
   </div>
 )
 
-
 LandingPageBanner.propTypes = {
   images: array.isRequired,
-  currentImage: object.isRequired,
+  currentImage: number.isRequired,
   moveLeft: func.isRequired,
   moveRight: func.isRequired
 }

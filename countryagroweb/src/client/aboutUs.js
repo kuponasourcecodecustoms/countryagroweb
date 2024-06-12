@@ -5,7 +5,7 @@ import { ImageGallery } from '../components/imageGallery'
 import { NavBar } from '../components/navBar'
 
 const images = require.context('../images/aboutUsImages', true)
-const aboutUsImages = images.keys().map(image => images(image));
+const aboutUsImages = images.keys().map(image => images(image))
 
 const CompanyBackground = () => ( 
   <div className='companyBackgground'>
@@ -43,30 +43,29 @@ const CompanyProfile = () =>  (
   </div>
 )
 
-
 export const AboutUs = () => {
   const [currentImage,setImage] = useState(0)
   const galleryLeft = () => currentImage > 0 ? setImage(currentImage -1) : setImage(aboutUsImages.length -1)
   const galleryRight = () => currentImage < aboutUsImages.length -1 ? setImage(currentImage + 1) : setImage(0)
 
-    return (
-      <div className='aboutUs'>
-        <NavBar/>
-        <div className='mainBody'>
-          <div className='imageGallery companyBackground'>
-            <div className='leftImage companyBackground'>
-              <CompanyBackground/>
-            </div>
-            <div className='rightImage companyBackground'>
-              <ImageGallery currentImage={currentImage} images={aboutUsImages} moveLeft={galleryLeft} moveRight={galleryRight}/>
-            </div>
+  return (
+    <div className='aboutUs'>
+      <NavBar/>
+      <div className='mainBody'>
+        <div className='imageGallery companyBackground'>
+          <div className='leftImage companyBackground'>
+            <CompanyBackground/>
           </div>
-          <div className='companyStructure corporateOverview'>
-            <CompanyStructure/>
-            <CompanyProfile/>
+          <div className='rightImage companyBackground'>
+            <ImageGallery currentImage={currentImage} images={aboutUsImages} moveLeft={galleryLeft} moveRight={galleryRight}/>
           </div>
         </div>
-        <Footer/>
+        <div className='companyStructure corporateOverview'>
+          <CompanyStructure/>
+          <CompanyProfile/>
+        </div>
       </div>
-    )
-  }
+      <Footer/>
+    </div>
+  )
+}
