@@ -7,7 +7,7 @@ import { NavBar } from '../components/navBar'
 import './landingPage.css'
 
 const images = require.context('../images/truckImages', true)
-const truckImages = images.keys().map(image => images(image));
+const truckImages = images.keys().map(image => images(image))
 
 const LandingPageBanner = ({images,currentImage,moveLeft,moveRight}) => (
   <div className='imageGallery'>
@@ -73,7 +73,6 @@ const CompanyOverview = () => (
     </div>
   </div>
 )
-
 
 LandingPageBanner.propTypes = {
   images: array.isRequired,
