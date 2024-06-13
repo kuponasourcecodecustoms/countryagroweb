@@ -45,6 +45,7 @@ export const ContactUs = () => {
                     contactNumber={col?.contactNumber}
                   />
                   </div>
+
               )}
             </div>
             )
