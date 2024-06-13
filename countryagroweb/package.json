@@ -2,6 +2,7 @@
   "name": "countryagroweb",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -25,9 +26,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewiredbuild",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "lint": "eslint ."
   },
@@ -48,6 +49,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "globals": "^15.2.0"
+    "globals": "^15.2.0",
+    "react-app-rewired": "^2.2.1"
   }
 }
