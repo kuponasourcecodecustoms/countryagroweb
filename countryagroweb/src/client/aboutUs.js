@@ -27,19 +27,19 @@ const CompanyProfile = () =>  (
     <h2>Company Profile</h2>
     <p>We have 13 employees altogether including the drivers, assistant drivers, operations and administration..</p>
     <p>For customers’ peace of mind, the vehicles:
+    </p>
     <ul>
       <li>Have Full Comprehensive Insurance cover</li>
       <li>Have adequate Goods in Transit insurance cover</li>
       <li>Are fitted with satellite tracking system, monitored in-house as well as 24-hour cell phone contact when on the road</li>
     </ul>
-    </p>
     <p>Our drivers are:
+    </p>
     <ul>
       <li>Highly experienced holders of Defensive Driving Certificates,</li>
       <li>All well trained in transporting different commodities including food stuffs, live poultry, specialised equipment and hazardous materials</li>
       <li>Uphold high service standards required to satisfy our customers.</li>
     </ul>
-    </p>
   </div>
 )
 

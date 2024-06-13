@@ -25,9 +25,9 @@ const LandingPageBanner = ({images,currentImage,moveLeft,moveRight}) => (
 const LandingPageButtons = () => (
   <div className='landingPageButtons'>
     <div className='buttonRow'>
-      <button onClick={()=>  window.location.href='/contact-us'}>How to Contact Us</button>
-      <button onClick={()=>  window.location.href='/location'}>Where to Find Us</button>
-      <button onClick={()=>  window.location.href='/about-us'} >More About Us</button>
+      <button onClick={()=>  window.location.href=`${process.env.PUBLIC_URL}/contact-us`}>How to Contact Us</button>
+      <button onClick={()=>  window.location.href=`${process.env.PUBLIC_URL}/location`}>Where to Find Us</button>
+      <button onClick={()=>  window.location.href=`${process.env.PUBLIC_URL}/about-us`} >More About Us</button>
     </div>
   </div>
 )

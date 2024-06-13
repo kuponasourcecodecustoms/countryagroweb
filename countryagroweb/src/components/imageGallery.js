@@ -1,7 +1,7 @@
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight} from '@fortawesome/free-solid-svg-icons'
-import { array, object, func} from 'prop-types'
+import { array, number, func} from 'prop-types'
 import './imageGallery.css'
 
 export const ImageGallery = ({images,currentImage,moveLeft,moveRight}) => (
@@ -14,7 +14,7 @@ export const ImageGallery = ({images,currentImage,moveLeft,moveRight}) => (
 
 ImageGallery.propTypes = {
   images: array.isRequired,
-  currentImage: object.isRequired,
+  currentImage: number.isRequired,
   moveLeft: func.isRequired,
   moveRight: func.isRequired
 }

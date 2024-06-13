@@ -12,7 +12,7 @@ import { Location } from './client/Location'
 
 const App = () => (
     <div className="App">
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL} >
             <Routes>
                 <Route
                     exact
