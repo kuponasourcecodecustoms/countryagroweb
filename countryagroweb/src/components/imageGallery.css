@@ -2,7 +2,7 @@
     display: inline-flex;
     width: 100%;
     padding-bottom: 24px;
-   margin: 0 auto;
+    margin: 0 auto;
     .leftImage {
         display: grid;
         text-align: center;
@@ -60,8 +60,12 @@
             }
         }
 
-        .rightImage > img {
+        .rightImage{ 
             height: auto;
+            img {
+            height: 256px;
+            width: 200px;
+            }
         }
 
         .leftButton,.rightButton {

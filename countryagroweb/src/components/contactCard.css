@@ -23,6 +23,7 @@
     }
     @media only screen and (max-width: 479px){
         padding: 6px;
+        height: 256px;
         span{
             font-size: 16px;
             padding: 6px 0;
