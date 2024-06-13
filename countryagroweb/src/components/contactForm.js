@@ -10,18 +10,23 @@ export const ContactForm = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
+  const {
+    REACT_APP_EMAILJS_SERVICE_ACCOUNT_ID:serviceId,
+    REACT_APP_EMAILJS_SERVICE_TEMPLATE_ID:templateId,
+    REACT_APP_EMAILJS_SERVICE_EMAIL_TEMPLATE_ID:emailTemplateId,
+   } = process.env
 
   const sendEmail = (e) => {
     e.persist()
     e.preventDefault()
     setIsSubmitting(true)
-
+  
     emailjs
       .sendForm(
-        "service_t5lgmxn",
-        "template_p12nt2q",
+        serviceId,
+        templateId,
         e.target,
-        "duuw_sWMBZbjGBc5K"
+        emailTemplateId
       )
       .then(
         (result) => { // eslint-disable-line no-unused-vars

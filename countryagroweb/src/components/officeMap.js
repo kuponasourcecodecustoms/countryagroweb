@@ -3,7 +3,8 @@ import mapboxgl from '!mapbox-gl'
 import './officeMap.css'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
-mapboxgl.accessToken = 'pk.eyJ1IjoibmlnZWx2ZXJlIiwiYSI6ImNsd2h1b2p2OTBqN2wycXBmcm04NHl6N2gifQ.Sh6lEdLP_y1uOhGxTQCBXQ'
+const mapboxAccessKey = process.env.REACT_APP_MAPBOX_SERVICE_ACCESS_KEY
+mapboxgl.accessToken = mapboxAccessKey
 
 export const OfficeMap = () => {
   const mapContainer = useRef(null)
