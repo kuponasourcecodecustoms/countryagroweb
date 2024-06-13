@@ -6,7 +6,7 @@ import './contactForm.css'
 
 export const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [stateMessage, setStaareteMessage] = useState(null)
+  const [stateMessage, setStateMessage] = useState(null)
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
