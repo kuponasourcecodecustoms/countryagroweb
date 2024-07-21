@@ -36,7 +36,7 @@ jobs:
           npm install eslint-plugin-react@7.34.1
           npm install eslint-plugin-react-hooks@4.6.2
           npm install globals@15.2.0
-        working-directory: ./countryagroweb
+
 
           
 
@@ -44,5 +44,5 @@ jobs:
         run:
           npx eslint .
           --config eslint.config.mjs
-        working-directory: ./countryagroweb
+
 

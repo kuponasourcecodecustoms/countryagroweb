@@ -13,11 +13,19 @@ export const ContactUs = () => {
       role: "Administrator",
       emailAddress: "admin@moneymaker.co.zw",
       contactNumber: "+263 775 880 756"
-    },{
+    },
+    {
       id: "2",
+      name: "Maureen Vere",
+      role: "Administrator",
+      emailAddress: "admin@countryagrotobacco.co.zw",
+      contactNumber: "+263 786 565 962"
+    },
+    {
+      id: "3",
       name: "Brian Vere",
       role: "Managing Director",
-      emailAddress: "brian@countryagrointernational.co.zw",
+      emailAddress: "brian@countryagrotobacco.co.zw.",
       contactNumber: "+263 732 328 671"
     })
     
