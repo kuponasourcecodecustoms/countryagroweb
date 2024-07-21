@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/countryagroweb/static/css/main.5881b9bf.css",
+    "main.css": "/countryagroweb/static/css/main.f8784068.css",
     "main.js": "/countryagroweb/static/js/main.f978de9d.js",
     "static/media/IMG-20211115-WA0020.jpg": "/countryagroweb/static/media/IMG-20211115-WA0020.1f891376e1bb87069aff.jpg",
     "static/media/IMG-20211116-WA0000.jpg": "/countryagroweb/static/media/IMG-20211116-WA0000.37bfda5087ea98aa5159.jpg",
@@ -40,11 +40,11 @@
     "static/media/IMG-20210708-WA0017.jpg": "/countryagroweb/static/media/IMG-20210708-WA0017.032dc81781f0d33f6320.jpg",
     "static/media/logo.png": "/countryagroweb/static/media/logo.7ce506b65a2ca4600d93.png",
     "index.html": "/countryagroweb/index.html",
-    "main.5881b9bf.css.map": "/countryagroweb/static/css/main.5881b9bf.css.map",
+    "main.f8784068.css.map": "/countryagroweb/static/css/main.f8784068.css.map",
     "main.f978de9d.js.map": "/countryagroweb/static/js/main.f978de9d.js.map"
   },
   "entrypoints": [
-    "static/css/main.5881b9bf.css",
+    "static/css/main.f8784068.css",
     "static/js/main.f978de9d.js"
   ]
 }
