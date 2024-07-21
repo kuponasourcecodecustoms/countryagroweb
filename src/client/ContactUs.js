@@ -5,6 +5,27 @@ import { NavBar } from '../components/navBar'
 import { ContactForm } from '../components/contactForm'
 import './contactUs.css'
 
+const ContactDetails = (rows) => ( 
+<><h2>Contact Details</h2>
+  <div className='contacts'>
+    {rows.map((row, index) =>  (
+      <div className="row" key={index}>
+        {row.map(col => 
+          <div key={col?.id} className="col-2">
+            <ContactCard 
+              key={col?.id}
+              name={col?.name} 
+              emailAddress={col?.emailAddress} 
+              role={col?.role} 
+              contactNumber={col?.contactNumber}
+            />
+            </div>
+        )}
+      </div>
+      )
+    )}
+  </div>
+  </>)
 export const ContactUs = () => {
     const contacts = []
     contacts.push({
@@ -39,26 +60,7 @@ export const ContactUs = () => {
       <NavBar/>
       <div className='mainBody'>
       <ContactForm/>
-      <h2>Contact Details</h2>
-        <div className='contacts'>
-          {rows.map((row, index) =>  (
-            <div className="row" key={index}>
-              {row.map(col => 
-                <div key={col?.id} className="col-2">
-                  <ContactCard 
-                    key={col?.id}
-                    name={col?.name} 
-                    emailAddress={col?.emailAddress} 
-                    role={col?.role} 
-                    contactNumber={col?.contactNumber}
-                  />
-                  </div>
-
-              )}
-            </div>
-            )
-          )}
-        </div>
+      {ContactDetails(rows)}
       </div>
       <Footer/>
     </div>

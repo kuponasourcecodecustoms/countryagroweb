@@ -1,4 +1,4 @@
-import React,{ useState} from 'react'
+import React,{ useState, useEffect } from 'react'
 import { array, number, func} from 'prop-types'
 import { Footer } from '../components/footer'
 import { ImageGallery } from '../components/imageGallery'
@@ -25,9 +25,9 @@ const LandingPageBanner = ({images,currentImage,moveLeft,moveRight}) => (
 const LandingPageButtons = () => (
   <div className='landingPageButtons'>
     <div className='buttonRow'>
-      <button onClick={()=>  window.location.href=`${process.env.PUBLIC_URL}/contact-us`}>How to Contact Us</button>
-      <button onClick={()=>  window.location.href=`${process.env.PUBLIC_URL}/location`}>Where to Find Us</button>
       <button onClick={()=>  window.location.href=`${process.env.PUBLIC_URL}/about-us`} >More About Us</button>
+      <button onClick={()=>  window.location.href=`${process.env.PUBLIC_URL}/location`}>Where to Find Us</button>
+      <button onClick={()=>  window.location.href=`${process.env.PUBLIC_URL}/contact-us`}>How to Contact Us</button>
     </div>
   </div>
 )
@@ -85,6 +85,14 @@ export const LandingPage = () => {
   const [currentImage,setImage] = useState(0)
   const galleryLeft = () => currentImage > 0 ? setImage(currentImage -1) : setImage(truckImages.length -1)
   const galleryRight = () => currentImage < truckImages.length -1 ? setImage(currentImage + 1) : setImage(0)
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setImage(prevIndex => (prevIndex + 1) % truckImages.length);
+    }, 4000)
+
+    return () => clearInterval(intervalId)
+  }, [])
 
   return (
     <div className='landingPage'>

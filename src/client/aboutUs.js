@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import { CompanyStructure } from '../components/companyStruture'
 import { Footer } from '../components/footer'
 import { ImageGallery } from '../components/imageGallery'
@@ -47,6 +47,14 @@ export const AboutUs = () => {
   const [currentImage,setImage] = useState(0)
   const galleryLeft = () => currentImage > 0 ? setImage(currentImage -1) : setImage(aboutUsImages.length -1)
   const galleryRight = () => currentImage < aboutUsImages.length -1 ? setImage(currentImage + 1) : setImage(0)
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setImage(prevIndex => (prevIndex + 1) % aboutUsImages.length);
+    }, 4000)
+
+    return () => clearInterval(intervalId)
+  }, [])
 
   return (
     <div className='aboutUs'>
