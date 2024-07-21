@@ -14,17 +14,17 @@ export const OfficeMap = () => {
   const officeCoords = { longitude: 31.1040652, latitude: -17.8361629 }
 
   useEffect(() => {
-    if (map.current) {
-      new mapboxgl.Marker().setLngLat([officeCoords.longitude,officeCoords.latitude]).addTo(map.current)
-      return
-    }
-
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/streets-v12',
       center: [harareCityCoords.longitude, harareCityCoords.latitude],
       zoom: 12
     })
+    if (map.current) {
+      new mapboxgl.Marker().setLngLat([officeCoords.longitude,officeCoords.latitude]).addTo(map.current)
+      return
+    }
+
    
   })
 

@@ -30,6 +30,9 @@
             background: none;
             border: none;
             border-radius: 48px;
+            &:hover{
+                border: solid 2px black;
+            }
 
             svg {
                 transform: scale(3);
