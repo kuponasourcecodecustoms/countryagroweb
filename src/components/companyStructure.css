@@ -19,8 +19,13 @@
         border-radius: 18px;
         padding: 18px;
         @media only screen and (max-width: 479px){
-            width: unset;
+            width: 350px;
             padding: 2px;
+            .companyStructureTree {
+                li{
+                width: 100px;
+                }
+            }
         }
     }
     .companyStructureComponent {

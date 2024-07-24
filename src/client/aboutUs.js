@@ -3,23 +3,26 @@ import { CompanyStructure } from '../components/companyStruture'
 import { Footer } from '../components/footer'
 import { ImageGallery } from '../components/imageGallery'
 import { NavBar } from '../components/navBar'
+import './aboutUs.css'
 
 const images = require.context('../images/aboutUsImages', true)
 const aboutUsImages = images.keys().map(image => images(image))
 
 const CompanyBackground = () => ( 
-  <div className='companyBackgground'>
-    <h2>Company Background</h2>
-    <p>Country Agro Logistics (Pvt) Ltd is a privately owned Zimbabwean logistics company.</p>
-    <p>
-    We aim to become a preferred partner in local conveyance of goods to and from any destination in Zimbabwe.<br/>
-    Country Agro Logistics has assembled a logistic Team, (operations, drivers, assistant drivers accountant),
-    and complimentary administration team, with vast experience, most having worked for the major multinational companies.
-    </p>
-    <p>We strive to build relationships with our clients, persistently achieving an understanding of their current, as well as future requirements.<br/>
-    Country Agro International has modern, well maintained, trucks and trailers arriving on time to pick up or deliver the cargo
-    </p>
-  </div>
+  <>
+    <div className='companyBackground'>
+      <h2>Company Background</h2>
+      <p>Country Agro Logistics (Pvt) Ltd is a privately owned Zimbabwean logistics company.</p>
+      <p className='desktop'>
+      We aim to become a preferred partner in local conveyance of goods to and from any destination in Zimbabwe.<br/>
+      Country Agro Logistics has assembled a logistic Team, (operations, drivers, assistant drivers accountant),
+      and complimentary administration team, with vast experience, most having worked for the major multinational companies.
+      </p>
+      <p className='desktop'>We strive to build relationships with our clients, persistently achieving an understanding of their current, as well as future requirements.<br/>
+      Country Agro International has modern, well maintained, trucks and trailers arriving on time to pick up or deliver the cargo
+      </p>
+    </div>
+  </>
 )
 
 const CompanyProfile = () =>  (
@@ -67,6 +70,21 @@ export const AboutUs = () => {
           <div className='rightImage companyBackground'>
             <ImageGallery currentImage={currentImage} images={aboutUsImages} moveLeft={galleryLeft} moveRight={galleryRight}/>
           </div>
+        </div>
+        <div className='mobileCompanyBio'>
+          <p>
+            We aim to become a preferred partner in local conveyance of goods to and from any destination in Zimbabwe.
+          </p>
+          <p>
+            Country Agro Logistics has assembled a logistic Team, (operations, drivers, assistant drivers accountant),
+            and complimentary administration team, with vast experience, most having worked for the major multinational companies.
+          </p>
+          <p>
+            We strive to build relationships with our clients, persistently achieving an understanding of their current, as well as future requirements.
+          </p>
+          <p>
+            Country Agro International has modern, well maintained, trucks and trailers arriving on time to pick up or deliver the cargo
+          </p>
         </div>
         <div className='companyStructure corporateOverview'>
           <CompanyStructure/>
