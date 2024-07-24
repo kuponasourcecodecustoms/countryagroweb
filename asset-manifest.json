@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/countryagroweb/static/css/main.70ec3124.css",
-    "main.js": "/countryagroweb/static/js/main.f18667d8.js",
+    "main.css": "/countryagroweb/static/css/main.d791ffd4.css",
+    "main.js": "/countryagroweb/static/js/main.2e39a15c.js",
     "static/media/aboutUsImage21.jpg": "/countryagroweb/static/media/aboutUsImage21.1f891376e1bb87069aff.jpg",
     "static/media/aboutUsImage22.jpg": "/countryagroweb/static/media/aboutUsImage22.37bfda5087ea98aa5159.jpg",
     "static/media/truckImage18.jpg": "/countryagroweb/static/media/truckImage18.37bfda5087ea98aa5159.jpg",
@@ -45,11 +45,11 @@
     "static/media/aboutUsImage13.jpg": "/countryagroweb/static/media/aboutUsImage13.032dc81781f0d33f6320.jpg",
     "static/media/logo.png": "/countryagroweb/static/media/logo.7ce506b65a2ca4600d93.png",
     "index.html": "/countryagroweb/index.html",
-    "main.70ec3124.css.map": "/countryagroweb/static/css/main.70ec3124.css.map",
-    "main.f18667d8.js.map": "/countryagroweb/static/js/main.f18667d8.js.map"
+    "main.d791ffd4.css.map": "/countryagroweb/static/css/main.d791ffd4.css.map",
+    "main.2e39a15c.js.map": "/countryagroweb/static/js/main.2e39a15c.js.map"
   },
   "entrypoints": [
-    "static/css/main.70ec3124.css",
-    "static/js/main.f18667d8.js"
+    "static/css/main.d791ffd4.css",
+    "static/js/main.2e39a15c.js"
   ]
 }
