@@ -2,7 +2,7 @@
   "name": "countryagroweb",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kuponasourcecodecustoms.github.io/countryagroweb",
+  "homepage": "https://logistics.countryagrotobacco.co.zw/",
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -28,7 +28,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build --cname logistics.countryagrotobacco.co.zw",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
