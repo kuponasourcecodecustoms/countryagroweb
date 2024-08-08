@@ -9,6 +9,7 @@ import { LandingPage } from './client/landingPage'
 import { ContactUs } from './client/ContactUs'
 import { AboutUs } from './client/aboutUs'
 import { Location } from './client/Location'
+import { Documentation } from './client/documentation'
 
 const App = () => (
     <div className="App">
@@ -33,6 +34,11 @@ const App = () => (
                     exact
                     path="/location"
                     element={<Location />}
+                />
+                 <Route
+                    exact
+                    path="/documentation"
+                    element={<Documentation />}
                 />
                 <Route
                     path="*"

@@ -1,0 +1,15 @@
+table.documentTable {
+    margin:  0  auto;
+    font-size: 18px;
+}
+button{
+    background: none;
+    border: none;
+    text-decoration: underline;
+    &:hover{
+        text-shadow: 0 0 .01px black, 0 0 .01px black;
+    }
+}
+.documentDescription {
+    font-size: 16px;
+}
