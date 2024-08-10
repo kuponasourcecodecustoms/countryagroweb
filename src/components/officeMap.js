@@ -18,10 +18,11 @@ export const OfficeMap = () => {
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/streets-v12',
       center: [harareCityCoords.longitude, harareCityCoords.latitude],
-      zoom: 12
+      zoom: 11.2
     })
     if (map.current) {
       new mapboxgl.Marker().setLngLat([officeCoords.longitude,officeCoords.latitude]).addTo(map.current)
+      map.current.addControl(new mapboxgl.NavigationControl());
       return
     }
 
